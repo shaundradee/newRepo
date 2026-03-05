@@ -17,3 +17,6 @@ node_modules
 
 # the README.md file is for documentation
 README.md
+
+#ignore lock yaml file
+pnpm-lock.yaml
