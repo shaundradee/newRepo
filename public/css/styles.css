@@ -4,3 +4,164 @@
 *:after {
   box-sizing: border-box;
 }
+
+/******* Global Styles ***************/
+:root {
+  /* Color Scheme */
+  --primaryAccent: #8B0000;
+  --hoverHighlight: #B22222;
+  --deepBackground-panels: #0D0D0D;
+  --cardSurface: #1C1C1C;
+  --primaryText: #F5F5F5;
+  --secondaryText: #A0A0A0;
+  --borderDivider: #5C0000;
+  --goldAccent: #C9A84C;
+  /* Font Families */
+  --headerFont: 'Bebas Neue', cursive; 
+  --subheaderFont: 'Oswald', sans-serif;
+  --bodyFont: 'Roboto', sans-serif;
+  /* border specs */
+  --borderRadius: 15px;
+  --borderSize: 7px;
+}
+
+body {
+  margin: 0;
+  background-image: url('/images/site/checkerboard.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/************************************/
+/*********** PARTIALS ***************/
+/************************************/
+
+/* Header Styles */
+header {
+  background-color: var(--deepBackground-panels);
+  color: var(--primaryText);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+  border-top-color: var(--borderDivider);
+  border-top-width: var(--borderSize);
+  border-top-style: solid;
+  border-left-color: var(--borderDivider);
+  border-left-width: var(--borderSize);
+  border-left-style: solid;
+  border-right-color: var(--borderDivider);
+  border-right-width: var(--borderSize);
+  border-right-style: solid;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primaryText);
+}
+
+.siteName {
+  font-family: var(--headerFont);
+  font-size: 2.5em;
+  padding: 20px;
+}
+
+#tools {
+  font-family: var(--subheaderFont);
+  font-size: 1.5em;
+  padding: 20px;
+}
+
+/* Navigation Styles */
+
+nav {
+  margin-left: 40px;
+  margin-right: 40px;
+  background-color: var(--deepBackground-panels);
+  border-left-color: var(--borderDivider);
+  border-left-width: var(--borderSize);
+  border-left-style: solid;
+  border-right-color: var(--borderDivider);
+  border-right-width: var(--borderSize);
+  border-right-style: solid;
+}
+
+nav ul {
+  background-color: var(--goldAccent);
+  font-family: var(--subheaderFont);
+  font-size: 1.35em;
+  color: var(--deepBackground-panels);
+  display: flex;
+  justify-content: space-around;  
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 20px;
+}
+
+nav ul li {
+  padding: 10px 20px;
+  border-radius: var(--borderRadius);
+  transition: background-color 0.3s ease;
+}
+
+nav ul li:hover {
+  background-color: var(--hoverHighlight);
+  color: var(--primaryText);
+  cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--deepBackground-panels);
+  color: var(--primaryText);
+  font-family: var(--bodyFont);
+  font-size: 1em;
+  padding: 20px;
+  border-left-color: var(--borderDivider);
+  border-left-width: var(--borderSize);
+  border-left-style: solid;
+  border-right-color: var(--borderDivider);
+  border-right-width: var(--borderSize);
+  border-right-style: solid;
+  border-bottom-left-radius: var(--borderRadius);
+  border-bottom-right-radius: var(--borderRadius);
+  border-bottom-color: var(--borderDivider);
+  border-bottom-width: var(--borderSize);
+  border-bottom-style: solid;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+/* Index Page Styles */
+main {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-color: var(--deepBackground-panels);
+  border-left-color: var(--borderDivider);
+  border-left-width: var(--borderSize);
+  border-left-style: solid;
+  border-right-color: var(--borderDivider);
+  border-right-width: var(--borderSize);
+  border-right-style: solid;
+  padding: 20px;
+  color: var(--primaryText);
+}
+
+h1 {
+  font-family: var(--headerFont);
+  font-size: 2em;
+}
+
+h2 {
+  font-family: var(--subheaderFont);
+  font-size: 1.5em;
+}
