@@ -26,8 +26,9 @@
   --borderMarginSide: 5%;
 }
 
-/* *****************Global Styles******************* */
 body {
+  background-color: var(--deepBackground-panels);
+  color: var(--primaryText);
   font-family: var(--bodyFont);
   margin: 0;
 }
@@ -51,12 +52,6 @@ header {
   color: var(--primaryText);
   display: flex;
   justify-content: space-between;
-  margin: 40px var(--borderMarginSide) 0 var(--borderMarginSide);
-  border-top-left-radius: var(--borderRadius);
-  border-top-right-radius: var(--borderRadius);
-  border-top: var(--borderSize) solid var(--borderDivider);
-  border-left: var(--borderSize) solid var(--borderDivider);
-  border-right: var(--borderSize) solid var(--borderDivider);
 }
 
 a {
@@ -78,25 +73,19 @@ a {
 
 /* Navigation Styles */
 nav {
-  margin: 0 var(--borderMarginSide);
   background-color: var(--deepBackground-panels);
-  border-left: var(--borderSize) solid var(--borderDivider);
-  border-right: var(--borderSize) solid var(--borderDivider);
 }
 
 nav ul {
   background-color: var(--goldAccent);
   font-family: var(--subheaderFont);
-  font-size: 1.35em;
+  font-size: 1em;
   color: var(--deepBackground-panels);
   display: flex;
   justify-content: space-around;  
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 15px;
-  margin-right: 15px;
-  padding: 20px;
+  padding: 10px;
+  margin: 0;
 }
 
 nav ul li {
@@ -116,23 +105,14 @@ footer {
   background-color: var(--deepBackground-panels);
   color: var(--primaryText);
   font-size: 1em;
-  padding: 20px;
-  border-left: var(--borderSize) solid var(--borderDivider);
-  border-right: var(--borderSize) solid var(--borderDivider);
-  border-bottom-left-radius: var(--borderRadius);
-  border-bottom-right-radius: var(--borderRadius);
-  border-bottom: var(--borderSize) solid var(--borderDivider);
-  margin: 0 var(--borderMarginSide) 40px var(--borderMarginSide);
+  padding: 15px;
 }
 
 
 /* Main Content Styles */
 main {
-  margin: 0 var(--borderMarginSide);
   background-color: var(--deepBackground-panels);
-  border-left: var(--borderSize) solid var(--borderDivider);
-  border-right: var(--borderSize) solid var(--borderDivider);
-  padding: 20px;
+  padding: 15px;
   color: var(--primaryText);
 }
 
@@ -149,7 +129,7 @@ h1 {
 /* HERO */
 .hero {
   position: relative;  
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .hero-image img {
@@ -162,26 +142,28 @@ h1 {
 .hero-card {
   position: absolute;
   /* overlap amount  percentages to help with responsiveness*/
-  bottom: -25px;
-  left: 50%;
+  bottom: 75px;
+  left: 15%;
   transform: translatex(-50%);
-  width: 60%;
-  max-width: 250px;
+  width: 45%;
   background-color: rgba(201, 168, 76, 0.75);
   color: var(--cardSurface);
-  padding: 1em;
   text-align: center;
+  padding: 5px;
 }
 
 .hero-card h2 {
   font-family: var(--subheaderFont);
+  font-size: 1.35em;
   margin: 0;
+  padding: 0;
 }
 
 .highlights {
-  font-size: 1.2em;
   list-style: none;
+  font-size: 1em;
   padding: 0;
+  margin: 0;
 }
 
 .own-today {
@@ -203,8 +185,7 @@ h1 {
 .content-cards {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 10px;
 }
 
 /* order shown for mobile reviews are first */
@@ -222,7 +203,6 @@ h1 {
   background-color: var(--cardSurface);
   color: var(--primaryText);
   padding: 20px;
-  margin-bottom: 20px;
 }
 
 .upgrade-card h2,
@@ -256,6 +236,11 @@ h1 {
   margin: 10px;
 }
 
+.upgrades li img {
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+
 .upgrades li:hover {
   background-color: var(--hoverHighlight);
   color: var(--secondaryText);
@@ -264,6 +249,7 @@ h1 {
 
 .review-list {
   font-size: 1.2em;
+  padding-left: 20px;
 }
 
 
@@ -273,24 +259,97 @@ h1 {
 
 @media screen and (min-width: 768px) {
   body {
-  background-image: url('/images/site/checkerboard.jpg');
-  background-repeat: repeat;
-  background-attachment: fixed;
+    background-image: url('/images/site/checkerboard.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
   }
 
+  /* Borders and margins to reflect assignments background */
+  header {
+    margin: 40px var(--borderMarginSide) 0 var(--borderMarginSide);
+    border-top-left-radius: var(--borderRadius);
+    border-top-right-radius: var(--borderRadius);
+    border-top: var(--borderSize) solid var(--borderDivider);
+    border-left: var(--borderSize) solid var(--borderDivider);
+    border-right: var(--borderSize) solid var(--borderDivider);
+  }
+
+  nav {
+    margin: 0 var(--borderMarginSide);
+    border-left: var(--borderSize) solid var(--borderDivider);
+    border-right: var(--borderSize) solid var(--borderDivider);
+  }
+
+  nav ul {
+    font-size: 1.35em;
+    padding: 20px;
+    margin: 0 15px;
+  }
+
+  main {
+    padding: 20px;
+    margin: 0 var(--borderMarginSide);
+    border-left: var(--borderSize) solid var(--borderDivider);
+    border-right: var(--borderSize) solid var(--borderDivider);
+  }
+
+  footer {
+    padding: 20px;
+    margin: 0 var(--borderMarginSide) 40px var(--borderMarginSide);
+    border-left: var(--borderSize) solid var(--borderDivider);
+    border-right: var(--borderSize) solid var(--borderDivider);
+    border-bottom: var(--borderSize) solid var(--borderDivider);
+    border-bottom-left-radius: var(--borderRadius);
+    border-bottom-right-radius: var(--borderRadius);
+  }
+
+  /* hero */
+  .hero {
+    padding-bottom: 4rem;
+  }
+
+  .hero-image{
+    background-color: white;
+  }
+
+  .hero-card {
+    width: 25%;
+    max-width: 250px;
+    padding: 1em;
+    left: 20%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-card h2 {
+    font-size: 2em;
+  }
+
+  .highlights {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+  }
+
+  .own-today {
+    font-size: 1.5em;
+  }
+
+  /* content layout changes for desktop */
   .content-cards {
+    gap: 20px;
+    margin-top: 20px;
     flex-direction: row;
   }
 
   .upgrade-card,
   .review-card {
     width: 50%;
+    margin-bottom: 20px;
   }
 
   .upgrades li {
-    display: flex;
-    flex-direction: column;
-    min-width: 60px;
+    width: 20%;
+    min-width: 85px;
   }
 
   .review-list li {
@@ -306,10 +365,4 @@ h1 {
     order: 2;
   }
 
-  .hero-card {
-    width: 25%;
-    left: 20%;
-    bottom: -10%;
-    transform: translate(-50%, -50%);
-  }
 }
