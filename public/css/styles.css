@@ -99,7 +99,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: var(--hoverHighlight);
+  background-color: var(--primaryAccent);
   color: var(--primaryText);
   cursor: pointer;
 }
