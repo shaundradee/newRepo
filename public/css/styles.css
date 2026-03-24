@@ -80,7 +80,6 @@ nav ul {
   background-color: var(--goldAccent);
   font-family: var(--subheaderFont);
   font-size: 1em;
-  color: var(--deepBackground-panels);
   display: flex;
   justify-content: space-around;  
   list-style: none;
@@ -89,12 +88,17 @@ nav ul {
 }
 
 nav ul li {
+  padding: 5px;
+}
+
+nav ul li a {
+  color: var(--deepBackground-panels);
   padding: 5px 10px;
   border-radius: var(--borderRadius);
   transition: background-color 0.3s ease;
 }
 
-nav ul li:hover {
+nav ul li a:hover {
   background-color: var(--hoverHighlight);
   color: var(--primaryText);
   cursor: pointer;
