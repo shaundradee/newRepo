@@ -32,7 +32,7 @@ app.get("/", utilities.handleErrors(baseController.buildHome));
 app.use("/inv", inventoryRoute);
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {
-  next({status: 404, message: 'Sorry, we appear to have lost that page.'})
+  next({status: 404, message: 'Sorry, we have been trying to reach this page about its extended warranty, but it changed its number and skipped town.'})
 });
 
 /* ***********************
@@ -45,7 +45,7 @@ app.use(async (err, req, res, next) => {
   if(err.status == 404){ 
     message = err.message;
   } else {
-    message = 'Oh no! Looks like it stalled and the check engine light came on.';
+    message = 'Oh no! We have been trying to reach this server about its extended warranty, but it broke down on the side of the highway.';
   }
   res.render("errors/error", {
     title: err.status || 'Server Error',

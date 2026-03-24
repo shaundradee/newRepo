@@ -84,12 +84,12 @@ nav ul {
   display: flex;
   justify-content: space-around;  
   list-style: none;
-  padding: 10px;
+  padding: 5px;
   margin: 0;
 }
 
 nav ul li {
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: var(--borderRadius);
   transition: background-color 0.3s ease;
 }
@@ -252,6 +252,88 @@ h1 {
   padding-left: 20px;
 }
 
+/***** Classifciation/Inventory Pages *****/
+#inv-display {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+#inv-display li {
+  background-color: var(--cardSurface);
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#inv-display li img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+#inv-display .namePrice {
+  margin-top: auto;
+  padding: 10px;
+}
+
+#inv-display .namePrice h2 {
+  font-size: 1.2em;
+}
+
+#inv-display .namePrice span {
+  font-size: 1.1em;
+  color: var(--goldAccent);
+}
+
+/****** Vehicle Detail Page *******/
+.vehicle-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vehicle-image img {
+  width: 100%;
+  height: auto;
+}
+
+.vehicle-info {
+  background-color: var(--cardSurface);
+  padding: 20px;
+  border-radius: var(--borderRadius);
+}
+
+.vehicle-info h2 {
+  font-family: var(--subheaderFont);
+  font-size: 1.5em;
+}
+
+.vehicle-info .price {
+  font-size: 1.3em;
+  color: var(--goldAccent);
+}
+
+/***** Error page *****/
+.error-home-link {
+  display: inline-block;
+  background-color: var(--primaryAccent);
+  color: var(--primaryText);
+  padding: 5px 10px;
+  border-radius: var(--borderRadius);
+  margin-top: 0.5em;
+  transition: background-color 0.3s ease;
+}
+
+.error-home-link:hover {
+  background-color: var(--hoverHighlight);
+  cursor: pointer;
+}
 
 /*************************************************/
 /*************** Desktop View ********************/
@@ -363,6 +445,24 @@ h1 {
 
   .review-card {
     order: 2;
+  }
+
+  /*** inventory/classification page ***/
+  #inv-display {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /****** Vehicle Detail Page *******/
+  .vehicle-detail {
+    flex-direction: row;
+  }
+
+  .vehicle-image {
+    width: 50%;
+  }
+
+  .vehicle-info {
+    width: 50%;
   }
 
 }
