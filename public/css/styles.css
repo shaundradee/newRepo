@@ -339,6 +339,130 @@ h1 {
   cursor: pointer;
 }
 
+/******* Login/Account and Register Page *******/
+#login-form,
+#register-form {
+  background-color: var(--cardSurface);
+  padding: 20px;
+  border-radius: var(--borderRadius);
+  border: 3px solid var(--goldAccent);
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#login-form label,
+#register-form label {
+  font-family: var(--subheaderFont);
+  font-size: 1.1em;
+  margin-top: 15px;
+}
+
+#login-form label:first-child {
+  margin-top: 0;
+}
+
+#login-form input,
+#register-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--bodyFont);
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+#register-form small {
+  color: var(--secondaryText);
+  margin-top: 5px;
+  font-size: 0.85em;
+}
+
+#login-form button,
+#register-form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--primaryAccent);
+  color: var(--primaryText);
+  border: none;
+  border-radius: var(--borderRadius);
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#login-form button:hover,
+#register-form button:hover {
+  background-color: var(--hoverHighlight);
+}
+
+#login-form + p,
+#register-form + p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#login-form + p a,
+#register-form + p a {
+  color: var(--goldAccent);
+  text-decoration: underline;
+}
+
+/***** Password Toggle Switch for Password *****/
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Hide the actual checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider track */
+.switch-slider {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background-color: var(--secondaryText);
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* The round knob */
+.switch-slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  top: 3px;
+  background-color: var(--primaryText);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* When checked — slide knob right and change track color */
+.switch input:checked + .switch-slider {
+  background-color: var(--goldAccent);
+}
+
+.switch input:checked + .switch-slider::before {
+  transform: translateX(20px);
+}
+
+/* The "Show Password" text */
+.switch-label {
+  font-size: 0.9em;
+  color: var(--secondaryText);
+}
+
+
 /*************************************************/
 /*************** Desktop View ********************/
 /*************************************************/
@@ -467,6 +591,12 @@ h1 {
 
   .vehicle-info {
     width: 50%;
+  }
+
+  /****** Login/Account Pages ******/
+  #login-form {
+    max-width: 450px;
+    padding: 30px;
   }
 
 }
