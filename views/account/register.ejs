@@ -1,6 +1,19 @@
 <!-- Register View -->
  <h1><%= title %></h1>
+ 
  <%- messages() %>
+
+ <% if (errors) { %>
+    <ul class="notice">
+        <% errors.array().forEach(error => { %>
+            <li><%= error.msg %></li>
+        <% }) %>
+    </ul>
+<% } %>
+  
+
+ <p class="req-note">All fields are required!</p>
+
  <form id="register-form" action="/account/register" method="post">
     <label for="account_firstname">First name</label>
     <input type="text" id="account_firstname" name="account_firstname" required>
@@ -12,12 +25,12 @@
     <input type="email" id="account_email" name="account_email" required>
 
     <label for="account_password">Password</label>
+    <span class="password-req">Passwords must be at least 12 characters and contain at least 1 number, 1 capital letter and 1 special character.</span>
     <input type="password" id="account_password" name="account_password" required
-        pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9\s]).{12,}$">
+        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
         <!-- for special character required you can "(?=.*[!@#$%^&*])" to be more specific-->
         <!--or use "(?=.*[^A-Za-z0-9\s])" for any character not a letter or number and no spaces to be acceptable-->
         <!-- "[^\s]" entire password cannot contain spaces -->
-    <small>Must be at least 12 characters, include 1 capital letter, 1 number, and 1 special character.</small>
 
     <!-- toggle password visibility -->
     <label class="switch">

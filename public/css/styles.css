@@ -373,8 +373,11 @@ h1 {
   margin-top: 5px;
 }
 
-#register-form small {
+.req-note,
+.password-req {
   color: var(--secondaryText);
+  font-family: var(--bodyFont);
+  font-style: italic;
   margin-top: 5px;
   font-size: 0.85em;
 }
@@ -398,7 +401,8 @@ h1 {
 }
 
 #login-form + p,
-#register-form + p {
+#register-form + p,
+.req-note{
   text-align: center;
   margin-top: 15px;
 }
