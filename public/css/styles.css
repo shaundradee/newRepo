@@ -45,6 +45,9 @@ footer {
 /*************** PARTIALS ********************/
 /*********************************************/
 
+/* #wrapper {
+  width: 100%;
+} */
 
 /* Header Styles */
 header {
@@ -87,9 +90,9 @@ nav ul {
   margin: 0;
 }
 
-nav ul li {
+/* nav ul li {
   padding: 5px;
-}
+} */
 
 nav ul li a {
   color: var(--deepBackground-panels);
@@ -341,7 +344,9 @@ h1 {
 
 /******* Login/Account and Register Page *******/
 #login-form,
-#register-form {
+#register-form,
+#add-classi-form,
+#add-inv-form {
   background-color: var(--cardSurface);
   padding: 20px;
   border-radius: var(--borderRadius);
@@ -353,7 +358,9 @@ h1 {
 }
 
 #login-form label,
-#register-form label {
+#register-form label,
+#add-classi-form label,
+#add-inv-form label {
   font-family: var(--subheaderFont);
   font-size: 1.1em;
   margin-top: 15px;
@@ -364,7 +371,9 @@ h1 {
 }
 
 #login-form input,
-#register-form input {
+#register-form input,
+#add-classi-form input,
+#add-inv-form input {
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -383,7 +392,9 @@ h1 {
 }
 
 #login-form button,
-#register-form button {
+#register-form button,
+#add-classi-form button,
+#add-inv-form button {
   margin-top: 20px;
   padding: 10px;
   background-color: var(--primaryAccent);
@@ -396,19 +407,25 @@ h1 {
 }
 
 #login-form button:hover,
-#register-form button:hover {
+#register-form button:hover,
+#add-classi-form button:hover,
+#add-inv-form button:hover  {
   background-color: var(--hoverHighlight);
 }
 
 #login-form + p,
 #register-form + p,
+#add-classi-form + p,
+#add-inv-form + p,
 .req-note{
   text-align: center;
   margin-top: 15px;
 }
 
 #login-form + p a,
-#register-form + p a {
+#register-form + p a 
+#add-classi-form + p a,
+#add-inv-form + p a{
   color: var(--goldAccent);
   text-decoration: underline;
 }
