@@ -75,7 +75,7 @@ invCont.addInventory = async function (req, res, next) {
         inv_thumbnail, inv_price, inv_miles, inv_color, classification_id,
     );
 
-    if (regResult) {
+    if (regResult.rowCount) {
         req.flash(
             "notice",
             `The ${inv_make} ${inv_model} was successfully added.`
