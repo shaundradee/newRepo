@@ -343,7 +343,7 @@ h1 {
 }
 
 /******* Login/Account and Register Page *******/
-#login-form,
+#loginForm,
 #register-form,
 #add-classi-form,
 #add-inv-form {
@@ -357,7 +357,7 @@ h1 {
   flex-direction: column;
 }
 
-#login-form label,
+#loginForm label,
 #register-form label,
 #add-classi-form label,
 #add-inv-form label {
@@ -366,11 +366,11 @@ h1 {
   margin-top: 15px;
 }
 
-#login-form label:first-child {
+#loginForm label:first-child {
   margin-top: 0;
 }
 
-#login-form input,
+#loginForm input,
 #register-form input,
 #add-classi-form input,
 #add-inv-form input {
@@ -391,7 +391,7 @@ h1 {
   font-size: 0.85em;
 }
 
-#login-form button,
+#loginForm button,
 #register-form button,
 #add-classi-form button,
 #add-inv-form button {
@@ -406,14 +406,14 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-#login-form button:hover,
+#loginForm button:hover,
 #register-form button:hover,
 #add-classi-form button:hover,
 #add-inv-form button:hover  {
   background-color: var(--hoverHighlight);
 }
 
-#login-form + p,
+#loginForm + p,
 #register-form + p,
 #add-classi-form + p,
 #add-inv-form + p,
@@ -422,7 +422,7 @@ h1 {
   margin-top: 15px;
 }
 
-#login-form + p a,
+#loginForm + p a,
 #register-form + p a 
 #add-classi-form + p a,
 #add-inv-form + p a{
@@ -615,7 +615,7 @@ h1 {
   }
 
   /****** Login/Account Pages ******/
-  #login-form {
+  #loginForm {
     max-width: 450px;
     padding: 30px;
   }
