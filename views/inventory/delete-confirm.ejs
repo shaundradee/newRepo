@@ -1,0 +1,39 @@
+<%- messages() %>
+
+<h1><%= title %></h1>
+
+<% if (locals.errors) { %>
+    <ul class="notice">
+        <% errors.array().forEach(error => { %>
+            <li><%= error.msg %></li>
+        <% }) %>
+    </ul>
+<% } %>
+
+
+<form id="deleteForm" action="/inv/delete" method="post">
+
+    <label for="invMake">Make:</label>
+    <input type="text" name="inv_make" id="invMake" required minlength="3"
+        value="<%= locals.inv_make ? inv_make : '' %>" readonly/>
+    
+    <label for="invModel">Model:</label>
+    <input type="text" name="inv_model" id="invModel" required minlength="3"
+        value="<%= locals.inv_model ? inv_model : '' %>" readonly/>
+
+    <label for="invYear">Year:</label>
+    <input type="number" name="inv_year" id="invYear" required min="1900" max="2099"
+        value="<%= locals.inv_year ? inv_year : '' %>" readonly/>
+
+    <label for="invPrice">Price:</label>
+    <input type="number" name="inv_price" id="invPrice" required min="0" step="0.01"
+        value="<%= locals.inv_price ? inv_price : '' %>" readonly/>
+
+    <p>Confirm Deletion - The delete is permanent.</p>
+
+    <button type="submit">Delete</button>
+
+    <input type="hidden" name="inv_id"
+        <% if(locals.inv_id) { %> value="<%= locals.inv_id %>"
+        <% } %>>
+</form>

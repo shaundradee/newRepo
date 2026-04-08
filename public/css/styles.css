@@ -347,7 +347,8 @@ h1 {
 #register-form,
 #add-classi-form,
 #add-inv-form,
-#updateForm {
+#updateForm,
+#deleteForm {
   background-color: var(--cardSurface);
   padding: 20px;
   border-radius: var(--borderRadius);
@@ -362,7 +363,8 @@ h1 {
 #register-form label,
 #add-classi-form label,
 #add-inv-form label,
-#updateForm label {
+#updateForm label,
+#deleteForm label {
   font-family: var(--subheaderFont);
   font-size: 1.1em;
   margin-top: 15px;
@@ -376,7 +378,8 @@ h1 {
 #register-form input,
 #add-classi-form input,
 #add-inv-form input,
-#updateForm input {
+#updateForm input,
+#deleteForm input {
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -398,7 +401,8 @@ h1 {
 #register-form button,
 #add-classi-form button,
 #add-inv-form button,
-#updateForm button {
+#updateForm button,
+#deleteForm button {
   margin-top: 20px;
   padding: 10px;
   background-color: var(--primaryAccent);
@@ -414,7 +418,8 @@ h1 {
 #register-form button:hover,
 #add-classi-form button:hover,
 #add-inv-form button:hover,
-#updateForm button:hover {
+#updateForm button:hover,
+#deleteForm button:hover {
   background-color: var(--hoverHighlight);
 }
 
@@ -423,16 +428,14 @@ h1 {
 #add-classi-form + p,
 #add-inv-form + p,
 #updateForm + p,
-.req-note{
+#deleteForm + p,
+.req-note {
   text-align: center;
   margin-top: 15px;
 }
 
 #loginForm + p a,
-#register-form + p a 
-#add-classi-form + p a,
-#add-inv-form + p a,
-#updateForm + p a{
+#register-form + p a {
   color: var(--goldAccent);
   text-decoration: underline;
 }
