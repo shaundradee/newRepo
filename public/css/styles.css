@@ -346,7 +346,8 @@ h1 {
 #loginForm,
 #register-form,
 #add-classi-form,
-#add-inv-form {
+#add-inv-form,
+#updateForm {
   background-color: var(--cardSurface);
   padding: 20px;
   border-radius: var(--borderRadius);
@@ -360,7 +361,8 @@ h1 {
 #loginForm label,
 #register-form label,
 #add-classi-form label,
-#add-inv-form label {
+#add-inv-form label,
+#updateForm label {
   font-family: var(--subheaderFont);
   font-size: 1.1em;
   margin-top: 15px;
@@ -373,7 +375,8 @@ h1 {
 #loginForm input,
 #register-form input,
 #add-classi-form input,
-#add-inv-form input {
+#add-inv-form input,
+#updateForm input {
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -394,7 +397,8 @@ h1 {
 #loginForm button,
 #register-form button,
 #add-classi-form button,
-#add-inv-form button {
+#add-inv-form button,
+#updateForm button {
   margin-top: 20px;
   padding: 10px;
   background-color: var(--primaryAccent);
@@ -409,7 +413,8 @@ h1 {
 #loginForm button:hover,
 #register-form button:hover,
 #add-classi-form button:hover,
-#add-inv-form button:hover  {
+#add-inv-form button:hover,
+#updateForm button:hover {
   background-color: var(--hoverHighlight);
 }
 
@@ -417,6 +422,7 @@ h1 {
 #register-form + p,
 #add-classi-form + p,
 #add-inv-form + p,
+#updateForm + p,
 .req-note{
   text-align: center;
   margin-top: 15px;
@@ -425,9 +431,16 @@ h1 {
 #loginForm + p a,
 #register-form + p a 
 #add-classi-form + p a,
-#add-inv-form + p a{
+#add-inv-form + p a,
+#updateForm + p a{
   color: var(--goldAccent);
   text-decoration: underline;
+}
+
+/* Disable button style for edit form */
+#updateForm button[disabled] {
+  background-color: var(--secondaryText);
+  cursor: not-allowed;
 }
 
 /***** Password Toggle Switch for Password *****/
