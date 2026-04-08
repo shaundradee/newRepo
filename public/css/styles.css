@@ -483,6 +483,41 @@ h1 {
   color: var(--secondaryText);
 }
 
+/***** Inventory Management Table *****/
+#inventoryDisplay {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#inventoryDisplay thead tr {
+  background-color: var(--primaryAccent);
+}
+
+#inventoryDisplay th,
+#inventoryDisplay td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--borderDivider);
+}
+
+#inventoryDisplay tbody tr:nth-child(even) {
+  background-color: var(--cardSurface);
+}
+
+#inventoryDisplay tbody tr:hover {
+  background-color: var(--hoverHighlight);
+}
+
+#inventoryDisplay a {
+  color: var(--goldAccent);
+  text-decoration: underline;
+}
+
+#inventoryDisplay a:hover {
+  color: var(--primaryText);
+}
+
 
 /*************************************************/
 /*************** Desktop View ********************/

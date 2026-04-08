@@ -35,4 +35,7 @@ router.post(
     utilities.handleErrors(invController.addInventory)
 );
 
+// Route to get inventory items based on classification_id, used to populate inventory management view
+router.get("/getInventory/:classification_id", utilities.handleErrors(invController.getInventoryJSON));
+
 module.exports = router;

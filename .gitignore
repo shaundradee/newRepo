@@ -18,5 +18,8 @@ node_modules
 # the README.md file is for documentation
 README.md
 
+# .md files are markdown files and are for documentation
+testAccounts.md
+
 #ignore lock yaml file
 pnpm-lock.yaml
