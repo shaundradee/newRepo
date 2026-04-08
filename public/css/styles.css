@@ -348,7 +348,9 @@ h1 {
 #add-classi-form,
 #add-inv-form,
 #updateForm,
-#deleteForm {
+#deleteForm,
+#updateAccountForm,
+#changePasswordForm {
   background-color: var(--cardSurface);
   padding: 20px;
   border-radius: var(--borderRadius);
@@ -364,7 +366,9 @@ h1 {
 #add-classi-form label,
 #add-inv-form label,
 #updateForm label,
-#deleteForm label {
+#deleteForm label,
+#updateAccountForm label,
+#changePasswordForm label {
   font-family: var(--subheaderFont);
   font-size: 1.1em;
   margin-top: 15px;
@@ -379,7 +383,9 @@ h1 {
 #add-classi-form input,
 #add-inv-form input,
 #updateForm input,
-#deleteForm input {
+#deleteForm input,
+#updateAccountForm input,
+#changePasswordForm input {
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -402,7 +408,9 @@ h1 {
 #add-classi-form button,
 #add-inv-form button,
 #updateForm button,
-#deleteForm button {
+#deleteForm button,
+#updateAccountForm button,
+#changePasswordForm button {
   margin-top: 20px;
   padding: 10px;
   background-color: var(--primaryAccent);
@@ -419,7 +427,9 @@ h1 {
 #add-classi-form button:hover,
 #add-inv-form button:hover,
 #updateForm button:hover,
-#deleteForm button:hover {
+#deleteForm button:hover,
+#updateAccountForm button:hover,
+#changePasswordForm button:hover {
   background-color: var(--hoverHighlight);
 }
 
@@ -429,6 +439,8 @@ h1 {
 #add-inv-form + p,
 #updateForm + p,
 #deleteForm + p,
+#updateAccountForm + span,
+#changePasswordForm + span,
 .req-note {
   text-align: center;
   margin-top: 15px;
