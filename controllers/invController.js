@@ -1,5 +1,6 @@
 const invModel = require("../models/inventory-model");
 const utilities = require("../utilities/");
+const favoriteModel = require("../models/favorite-model");
 
 const invCont = {};
 
@@ -27,10 +28,23 @@ invCont.buildByInvId = async function (req, res, next) {
     const vehicle = await invModel.getInventoryByInvId(inv_id);
     const detail = await utilities.buildVehicleDetail(vehicle);
     let nav = await utilities.getNav();
+
+    // Adding for favorites functionality: check if the user is logged in 
+    // and if so, check if this vehicle is in their favorites
+    let isFavorite = false;
+    if (res.locals.loggedin) {
+        isFavorite = await favoriteModel.checkFavoriteExists(
+            res.locals.accountData.account_id,
+            inv_id
+        );
+    }
+    
     res.render("./inventory/detail", {
         title: vehicle.inv_make + " " + vehicle.inv_model,
         nav,
         detail,
+        isFavorite,
+        inv_id, // pass the inv_id to the view so it can be included in the form for adding/removing favorites
     });
 };
 

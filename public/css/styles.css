@@ -74,6 +74,11 @@ a {
   padding: 20px;
 }
 
+#tools a + a {
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
 /* Navigation Styles */
 nav {
   background-color: var(--deepBackground-panels);
@@ -324,6 +329,31 @@ h1 {
 .vehicle-info .price {
   font-size: 1.3em;
   color: var(--goldAccent);
+}
+
+/* Favorites Button */
+.favorite-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--goldAccent);
+  color: var(--deepBackground-panels);
+  border: none;
+  border-radius: var(--borderRadius);
+  font-size: 1em;
+  font-family: var(--bodyFont);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-btn:hover,
+.favorite-btn.remove:hover {
+  background-color: var(--hoverHighlight);
+  color: var(--primaryText);
+}
+
+.favorite-btn.remove {
+  background-color: var(--secondaryText);
 }
 
 /***** Error page *****/

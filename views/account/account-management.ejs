@@ -18,6 +18,9 @@
 
 <p><a href="/account/update/<%= locals.accountData.account_id %>">Update Account Information</a></p>
 
+<!-- favorites link for all users -->
+<p><a href="/favorites/">My Favorites</a></p>
+
 <!-- inventory link only render for Employee/Admin — absent from the markup for Client accounts -->
 <% if (locals.accountData.account_type === "Employee" || locals.accountData.account_type === "Admin") { %>
     <h3>Inventory Management</h3>

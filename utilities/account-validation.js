@@ -82,6 +82,9 @@ validate.loginRules = () => {
 
 /* ******************************
  * Check data and return errors or continue to registration
+ * --(the pattern below re-renders the form with error messages and 
+ *    "sticky" form data if there are validation errors, otherwise 
+ *    it calls next() to proceed to the next middleware or route handler)
  * ***************************** */
 validate.checkRegData = async (req, res, next) => {
   const { account_firstname, account_lastname, account_email } = req.body
@@ -90,10 +93,10 @@ validate.checkRegData = async (req, res, next) => {
   if (!errors.isEmpty()) {
     let nav = await utilities.getNav()
     res.render("account/register", {
-      errors,
+      errors,    // ← passes errors INTO the view
       title: "Registration",
       nav,
-      account_firstname,
+      account_firstname,    // ← passes the user's input back so the form is "sticky"
       account_lastname,
       account_email,
     })

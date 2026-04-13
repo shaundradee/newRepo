@@ -18,6 +18,7 @@ const pool = require('./database');
 const accountRoute = require("./routes/accountRoute");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const favoritesRoute = require("./routes/favoritesRoute");
 
 
 /* *******************************************
@@ -74,6 +75,9 @@ app.use("/inv", inventoryRoute);
 
 //Login/Account Route
 app.use("/account", accountRoute);
+
+// Favorites route
+app.use("/favorites", favoritesRoute);
 
 // File Not Found Route - !!!must be last route in list
 app.use(async (req, res, next) => {

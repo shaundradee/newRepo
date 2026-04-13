@@ -4,13 +4,25 @@
     res.redirect("/");
 } %>
 
-<!-- 
-*******************************************
-* using a comment mark (#), disables this code
-* In the future, when messages have been implemented, 
-* you'll replace the comment with the unescaped mark (—)
-************************** -->
-<%# messages() %>
+<%- messages() %>
 
 <%- detail %>
-    
+
+<!-- only render the form if the user is logged in -->
+<% if (locals.loggedin) { %>
+    <% if (isFavorite) { %>
+        <form action="/favorites/remove" method="POST" onsubmit="return validateFavoriteForm(this);">
+            <input type="hidden" name="inv_id" value="<%= inv_id %>">
+            <input type="hidden" name="source" value="detail">
+            <button type="submit" class="favorite-btn remove">Remove from Favorites</button>
+        </form>
+        
+    <% } else { %>
+        <form action="/favorites/add" method="POST" onsubmit="return validateFavoriteForm(this);">
+            <input type="hidden" name="inv_id" value="<%= inv_id %>">
+            <button type="submit" class="favorite-btn">Add to Favorites</button>
+        </form>
+    <% } %>
+<% } %>
+
+<script src="/js/favorites.js" defer></script>
